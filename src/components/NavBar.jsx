@@ -9,7 +9,7 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
-import CardWidget from "./CartWidget";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
@@ -37,7 +37,7 @@ const NavBar = () => {
           </Form>
           <Nav className="d-flex">
             <Nav.Link href="#features">
-              <CardWidget />
+              <CartWidget />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

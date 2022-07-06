@@ -1,15 +1,35 @@
 .btnGoCart {
-    margin-left: 30px;
     font-size: 12px;  
+}
+.agregarItem {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 .imgItem {
     max-width: 200px;
+    margin: 0 auto;
 }
 .btnMenos {
     margin: 5px;
     font-size: 10px;
+    border-radius: 100%;
 }
 .btnMas {
     margin: 5px;
     font-size: 10px;
+    border-radius: 100%;
+}
+.badge {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+.badgeOff {
+    text-decoration: line-through;
+    background-color: red;
 }

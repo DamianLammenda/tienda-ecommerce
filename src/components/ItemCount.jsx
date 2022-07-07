@@ -5,13 +5,13 @@ import Button from "react-bootstrap/Button";
 const ItemCount = () => {
 const [count, setCount] = useState(0);
 let stock = {
-  laptop: 2,
+  laptop: 4,
   monitor: 5,
   i7: 6,
   teclado:4  
 };
 const onAdd = () => {
-  console.log(stock.laptop )
+  console.log(count)
   }
   return (
     <>

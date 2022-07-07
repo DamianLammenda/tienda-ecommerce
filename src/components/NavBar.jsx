@@ -9,13 +9,14 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
+import logo from "./imgs/logo.png"
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Tienda Ecommerce</Navbar.Brand>
+        <Navbar.Brand href="#home"><img style={{width:40}} src={logo} alt="logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

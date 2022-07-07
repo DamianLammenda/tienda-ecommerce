@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./components/styles/itemCount.css"
+import "./components/styles/cards.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

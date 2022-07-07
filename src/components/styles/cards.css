@@ -1,0 +1,16 @@
+.badge {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+.badgeOff {
+    text-decoration: line-through;
+}
+.imgsale {
+    max-width: 200px;
+    margin-left: 120px;
+}
+.cardText {
+    font-size: 0.8rem;
+}

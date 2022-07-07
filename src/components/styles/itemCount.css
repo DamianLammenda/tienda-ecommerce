@@ -31,5 +31,8 @@
 }
 .badgeOff {
     text-decoration: line-through;
-    background-color: red;
+}
+.imgsale {
+    max-width: 150px;
+    margin-left: 120px;
 }

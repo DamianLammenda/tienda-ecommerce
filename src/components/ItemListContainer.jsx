@@ -2,13 +2,11 @@ import ItemCards from "./ItemCards";
 import ItemCount from "./ItemCount";
 
 const ItemListContainer = () => {
-  const onAddItem = (count) => {
-    alert(`${count} items will be added to the cart!`);
-  };
+  
   return (
     <>
     <ItemCards />
-    <ItemCount stock={5} initial={0} onAdd={onAddItem}></ItemCount>;
+    {/* <ItemCount stock={5} initial={0} onAdd={onAddItem}></ItemCount>; */}
     </>
   ) 
   

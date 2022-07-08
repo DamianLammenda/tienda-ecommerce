@@ -7,6 +7,10 @@ import laptop from "./imgs/laptop.png"
 import sale from "./imgs/sale.png"
 import Badge from 'react-bootstrap/Badge';
 
+const onAddItem = (count) => {
+  alert(`${count} items agregados al carrito!`);
+};
+
 
 
 const Cards = () => {
@@ -38,7 +42,7 @@ const Cards = () => {
                     puertos que necesitas.
                   </Card.Text>
                   <Card.Text>
-                    {/* <ItemCount  /> */}
+                    <ItemCount stock={10} initial={0} onAdd={onAddItem} />
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -67,7 +71,7 @@ const Cards = () => {
                     puertos que necesitas.
                   </Card.Text>
                   <Card.Text>
-                    {/* <ItemCount  /> */}
+                    <ItemCount stock={5} initial={0} onAdd={onAddItem} />
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -96,7 +100,7 @@ const Cards = () => {
                     puertos que necesitas.
                   </Card.Text>
                   <Card.Text>
-                    {/* <ItemCount  /> */}
+                    <ItemCount stock={7} initial={0} onAdd={onAddItem} />
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -125,7 +129,7 @@ const Cards = () => {
                     puertos que necesitas.
                   </Card.Text>
                   <Card.Text>
-                    {/* <ItemCount  /> */}
+                    <ItemCount stock={3} initial={0} onAdd={onAddItem} />
                   </Card.Text>
                 </Card.Body>
               </Card>

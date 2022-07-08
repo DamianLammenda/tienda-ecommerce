@@ -1,7 +1,7 @@
 import ItemCards from "./ItemCards";
 import ItemCount from "./ItemCount";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   const onAddItem = (count) => {
     alert(`${count} items will be added to the cart!`);
   };

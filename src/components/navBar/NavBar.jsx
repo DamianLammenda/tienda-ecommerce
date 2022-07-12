@@ -9,8 +9,8 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
-import logo from "./imgs/logo.png"
-import CartWidget from "./CartWidget";
+import logo from "../imgs/logo.png"
+import CartWidget from "../cartWidget/CartWidget";
 
 const NavBar = () => {
   return (

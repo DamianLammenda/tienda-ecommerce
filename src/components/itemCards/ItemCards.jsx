@@ -2,9 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/esm/Container';
-import ItemCount from './ItemCount';
-import laptop from "./imgs/laptop.png"
-import sale from "./imgs/sale.png"
+import ItemCount from '../itemCount/ItemCount'
 import Badge from 'react-bootstrap/Badge';
 
 const onAddItem = (count) => {

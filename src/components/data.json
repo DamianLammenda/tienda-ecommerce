@@ -1,8 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ItemList from "./ItemList";
-
-const ItemListContainer = () => {
-  const ItemData = [{
+[{
     "id": 1,
     "carMake": "Land Rover",
     "carModel": "Range Rover",
@@ -72,34 +68,5 @@ const ItemListContainer = () => {
     "carYear": 2021,
     "carStock": 15,
     "carImg": "https://1.bp.blogspot.com/-ax3iyaNjR4U/YDz6WdTS7XI/AAAAAAADdUU/yWsF-gl87DsIqWPAiV5xwvLsKpmpOvAFwCNcBGAsYHQ/s704/Lanzamiento-Peugeot-208-Active-Like-Pack-2021-Precios-0km-202100001.jpeg"
-  }, 
+  } 
   ]
-
-  const [items, setItems] = useState([]);
-  // console.log (items)
-  useEffect (()=> {
-
-      let promiseItem = new Promise ((resolve, reject)=> {
-        setTimeout( () => {
-            resolve(ItemData)
-        }, 2000);
-      })
-
-      promiseItem.then((resp)=> {
-        setItems (ItemData);
-      }).catch ((error)=>console.error(error));
-  },[])
-  return (
-    <>
-    {/* <ItemCards /> */}
-    <ItemList items={items}/>
-
-
-
-    </>
-  ) 
-  
-};
-
-export default ItemListContainer;
-

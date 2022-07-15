@@ -5,7 +5,6 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const [details, setDetails] = useState([]);
-
   useEffect(() => {
     let cargaData = new Promise((resolve) => {
       setTimeout(() => {
@@ -13,8 +12,7 @@ const ItemDetailContainer = () => {
       }, 2000);
     });
     cargaData.then(() => {
-      setDetails(DataJson);
-      
+      setDetails(DataJson);      
     });
   }, []);
 

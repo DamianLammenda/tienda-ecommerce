@@ -1,0 +1,12 @@
+{
+"id": 1,
+"carMake": "Land Rover",
+"carModel": "Range Rover",
+"carYear": 2007,
+"carStock": 15,
+"carImg": "https://cars.usnews.com/static/images/Auto/izmo/293573/2008_land_rover_range_rover_angularfront.jpg",
+"description":"El Land Rover Range Rover 4.4 V8 HSE (2006-2007) tiene un motor gasolina de 4394 cc con 8 cilindros situados en v que alcanza una potencia máxima de 306 CV a 5400 rpm y par máximo de 440 nm a 3600 rpm. Se trata por tanto de una mecánica con una potencia específica de 306 CV",
+"price": 95.899,
+"color": "Grey"
+
+}

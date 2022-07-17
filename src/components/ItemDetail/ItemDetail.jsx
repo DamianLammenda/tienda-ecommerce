@@ -4,7 +4,9 @@ import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 
 const ItemDetail = (props) => {
-  return (
+  console.log(props.details.category)
+  console.log(props.details)
+  return props.loading ? (
     <>
       <Container fluid>
         <Row className="g-2">
@@ -18,9 +20,7 @@ const ItemDetail = (props) => {
                 <Card.Text>Descripción: {props.details.description}</Card.Text>
               </Card.Body>
               <Card.Footer>
-                <small className="text-muted">
-                  Stock disponible: {props.details.carStock}
-                </small>
+                <small className="text-muted">Stock disponible: {props.details.carStock}</small>
               </Card.Footer>
               <Card.Footer>
                 <small>Precio: {parseFloat(props.details.price)}</small>
@@ -30,7 +30,12 @@ const ItemDetail = (props) => {
         </Row>
       </Container>
     </>
+  ) : (
+    <>
+      <h1>Cargando...</h1>
+    </>
   );
 };
+
 
 export default ItemDetail;

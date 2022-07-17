@@ -1,12 +1,142 @@
-{
-"id": 1,
-"carMake": "Land Rover",
-"carModel": "Range Rover",
-"carYear": 2007,
-"carStock": 15,
-"carImg": "https://cars.usnews.com/static/images/Auto/izmo/293573/2008_land_rover_range_rover_angularfront.jpg",
-"description":"El Land Rover Range Rover 4.4 V8 HSE (2006-2007) tiene un motor gasolina de 4394 cc con 8 cilindros situados en v que alcanza una potencia máxima de 306 CV a 5400 rpm y par máximo de 440 nm a 3600 rpm. Se trata por tanto de una mecánica con una potencia específica de 306 CV",
-"price": 95.899,
-"color": "Grey"
-
-}
+[{
+    "id": 1,
+    "carMake": "Land Rover",
+    "carModel": "Range Rover",
+    "carYear": 2007,
+    "carStock": 15,
+    "carImg": "https://cars.usnews.com/static/images/Auto/izmo/293573/2008_land_rover_range_rover_angularfront.jpg",
+    "description":"El Land Rover Range Rover 4.4 V8 HSE (2006-2007) tiene un motor gasolina de 4394 cc con 8 cilindros situados en v que alcanza una potencia máxima de 306 CV a 5400 rpm y par máximo de 440 nm a 3600 rpm. Se trata por tanto de una mecánica con una potencia específica de 306 CV",
+    "price": 95.899,
+    "color": "Grey",
+    "category": {
+      "id": 1,
+      "type": "truck"
+    }
+  }, {
+    "id": 2,
+    "carMake": "Pontiac",
+    "carModel": "Montana",
+    "carYear": 2006,
+    "carStock": 6,
+    "carImg": "https://www.motortrend.com/uploads/sites/10/2015/11/2006-pontiac-montana-sv6-fwd-mini-van-angular-front.png?fit=around%7C875:492.1875",
+    "description":"El automóvil estaba equipado con un motor de gasolina V6 de 3,35 litros, potencia de 186 hp / 5200 rpm y un par de 284 Nm / 4000 rpm. Este motor tiene 4 válvulas por cilindro, árbol de levas central e inyección de combustible distribuida. Una minivan con una unidad de potencia de este tipo puede acelerar a 190 km / h. Consumo de AI-91 en la ciudad de 12,4 litros, en la carretera de 9,1 litros y en el ciclo combinado - 11,2 litros cada 100 kilómetros. El motor se agrega con una transmisión automática de 4 velocidades.",
+    "price": 24.250 ,
+    "color": "DarkRed",
+    "category": {
+      "id": 1,
+      "type": "truck"
+    }
+  }, {
+    "id": 3,
+    "carMake": "Pontiac",
+    "carModel": "Sunbird",
+    "carYear": 1994,
+    "carStock": 13,
+    "carImg": "https://media.ed.edmunds-media.com/pontiac/sunbird/1994/oem/1994_pontiac_sunbird_sedan_le_fq_oem_1_500.jpg",
+    "description":"En términos de asistencia en la conducción, el 1994 Pontiac Sunbird LE tiene control de estabilidad y control de tracción además del sistema de frenos antibloqueo (abs). el vehículo tiene un motor opcional y ofrece y. las características de seguridad también incluyen y. la suspensión delantera es mientras que la suspensión trasera es. el coche también cuenta con un tiene de serie. las características electrónicas incluyen control de crucero. para mayor comodidad, el automóvil tiene ventanas eléctricas y cerraduras eléctricas en las puertas. También hay una función de entrada sin llave a control remoto. además, el coche tiene. el volante tiene botones de control de audio. el consumo de combustible es de l / 100 km en ciudad y de l / 100 km en carretera.",
+    "price": 12.799,
+    "color": "Green",
+    "category": {
+      "id": 2,
+      "type": "sedan"
+    }
+  }, {
+    "id": 4,
+    "carMake": "Jeep",
+    "carModel": "Commander",
+    "carYear": 2009,
+    "carStock": 8,
+    "carImg": "https://cars.usnews.com/static/images/Auto/izmo/302405/2009_jeep_commander_angularfront.jpg",
+    "description": "El Jeep Commander 3.0 V6 CRD Laredo (2008-2009) tiene un motor gasóleo de 2987 cc con 6 cilindros ubicados en v que alcanza una potencia máxima de 218 CV a 4000 rpm y par máximo de 510 nm a 1600-2800 rpm. Se trata por tanto de una mecánica con una potencia concreta de 218 CV, con alimentación inyección directa por conducto común.",
+    "price": 37.998,
+    "color":"White",
+    "category": {
+      "id": 1,
+      "type": "truck"
+    }
+  }, {
+    "id": 5,
+    "carMake": "Mercedes-Benz",
+    "carModel": "300SE",
+    "carYear": 1992,
+    "carStock": 14,
+    "carImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQhGOC7TwUT_QM_nsjhETlfB22BAYAh6v4cQ&usqp=CAU",
+    "description":"El Mercedes 300 SE cuenta con un motor delantro longitudinal seis cilindros en línea de aspiración natural que desarolla un par máximo de 310 Nm desde 4100 rpm y una potencia máxima de 231 CV a 5800 rpm transmitida a las ruedas traseras de 16 pulgadas a través una transmisión automática de 5 velocidades",
+    "price":45.000,
+    "color":"Grey",
+    "category": {
+      "id": 2,
+      "type": "sedan"
+    }
+  }, {
+    "id": 6,
+    "carMake": "Chevrolet",
+    "carModel": "Malibu",
+    "carYear": 2009,
+    "carStock": 19,
+    "carImg": "https://cars.usnews.com/static/images/Auto/izmo/300501/2009_chevrolet_malibu_angularfront.jpg",
+    "description":"El nuevo Malibu 2009 versión cuatro cilindros entrega buen desempeño y economía de combustible. El nuevo motor (de aluminio), cuenta con apertura variable de válvulas y tiene un desplazamiento de 2.4 L entregando 169 hp @ 6400 rpm con un torque de 160 lb-pie @ 4500 rpm. Cuenta con la transmisión automática Hydra-Matic de seis velocidades, siendo el único motor en nuestro mercado de 4 cilindros con dicha caja de cambios, que le confiere un mejor rendimiento de combustible combinado (15.45 km/lt).",
+    "price":27.899,
+    "color":"White",
+    "category": {
+      "id": 2,
+      "type": "sedan"
+    }
+  }, {
+    "id": 7,
+    "carMake": "Mercedes-Benz",
+    "carModel": "SL-Class",
+    "carYear": 2012,
+    "carStock": 20,
+    "carImg": "https://images.hgmsites.net/lrg/2012-mercedes-benz-sl-class-2-door-roadster-6-3l-amg-angular-front-exterior-view_100380545_l.jpg",
+    "category": {
+      "id": 3,
+      "type": "coupe"
+    },
+    "description":"Cuenta con una potencia de 381 caballos a 6.750 revoluciones y 480 Nm de par motor entra las 3.250 y las 5.000 vueltas de motor. El siguiente en el escalafón es el Mercedes-AMG SL 55 4MATIC con un poderoso V8 biturbo de cuatro litros que desarrolla 474 caballos y 700 Nm de par motor. Anuncia una velocidad punta de 295 km/h y una aceleración de 0 a 100 Km/h en tan solo 3,9 segundos.",
+    "price": 115.500,
+    "color":"Grey"
+  }, {
+    "id": 8,
+    "carMake": "Hyundai",
+    "carModel": "Accent",
+    "carYear": 2013,
+    "carStock": 2,
+    "carImg": "https://s.aolcdn.com/dims-global/dims3/GLOB/resize/708x398/quality/60/https://s.aolcdn.com/commerce/autodata/images/USC30HYC011A122000.jpg",
+    "category": {
+      "id": 2,
+      "type": "sedan"
+    },
+    "description":"El Hyundai Accent 1.6 es de 4116.00 mm de largo. El tiene una anchura de 1701.00 mm y una altura de 1450.00 mm. La batalla de este modelo mide de 2571.00 mm. Su vía delantera es de 1505.00 mm y su vía trasera es de 1512.00 mm. Él es de propio peso/masa de 1102 kg. El motor de Hyundai Accent 1.6 es de 4 cilindros con capacidad de 1591 cc. Los cilindros tiene 4 válvulas por cilindro y una disposición en línea. La longitud de la carrera del pistón y el diámetro de los cilindros son respectivamente de 85.40 mm y de 77.00 mm. La relación de compresión es 11.00:1. A pesar de eso, el motor funciona con sistema de lubricación de tipo cárter húmedo. Este es un motor atmosférico (con aspiración natural/compresor de aire) así como de tipo DOHC (doble árbol de levas a la cabeza). Él tiene una orientación transversal y está situado en la parte delantera del vehículo. Él utilice inyección directa de gasolina como sistema de combustión. El motor suministra una potencia máxima de 103 kW / 141 hp en 6300 rpm y par máximo (torque) de 168 Nm en 4850 rpm. El depósito puede tomar 43.20 l combustible. Este modelo emplea una caja de cambios manual de 6 velocidades. ",
+    "price": 12.000,
+    "color":"White"
+  }, {
+    "id": 9,
+    "carMake": "Ford",
+    "carModel": "Focus",
+    "carYear": 2018,
+    "carStock": 19,
+    "carImg": "https://img.motoryracing.com/noticias/portada/24000/24870-n.jpg",
+    "category": {
+      "id": 2,
+      "type": "sedan"
+    },
+    "description":"En la nueva generación del Focus, Ford ha dado prioridad a la gasolina. El 1.0 Ecoboost se ofrece en tres niveles de potencia, 85, 100 y 125 CV, mientras que el nuevo EcoBoost 1.5 hace lo propio con dos versiones, una de 150 CV y otra de 182 CV que será, por el momento, el motor más potente de la gama.",
+    "price": 44.899,
+    "color":"Yellow"
+  }, {
+    "id": 10,
+    "carMake": "Peugeot",
+    "carModel": "208",
+    "carYear": 2021,
+    "carStock": 15,
+    "carImg": "https://www.elcarrocolombiano.com/wp-content/uploads/2020/08/20200806-PEUGEOT-208-EN-MINIATURA-03.jpg",
+    "category": {
+      "id": 2,
+      "type": "sedan"
+    },
+    "description":"El nuevo 208 GT cuenta con un motor 1.2L turboalimentado de 3 cilindros, con 130 CV y 230 Nm de torque desde las 1.750 RPM. Asociado a una caja automática de 6 velocidades, este conjunto de motor entrega destacadas prestaciones y permite que el 208 GT tenga un comportamiento deportivo excelente.",
+    "price":19.999,
+    "color":"blue"
+  } 
+  ]

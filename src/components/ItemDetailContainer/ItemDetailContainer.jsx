@@ -5,20 +5,24 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const [details, setDetails] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     let cargaData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(DataJson);
       }, 2000);
+      setLoading(false);
     });
     cargaData.then(() => {
-      setDetails(DataJson);      
+      setDetails(DataJson);  
+      setLoading(true)   
     });
   }, []);
 
   return (
     <>
-      <ItemDetail details={details} />
+      <ItemDetail details={details} loading={loading}/>
     </>
   );
 };

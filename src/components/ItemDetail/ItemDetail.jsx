@@ -18,6 +18,7 @@ const ItemDetail = (props) => {
                 <Card.Text>Modelo: {props.details.carModel}</Card.Text>
                 <Card.Text>Año: {props.details.carYear}</Card.Text>
                 <Card.Text>Descripción: {props.details.description}</Card.Text>
+                <Card.Text>Color: {props.details.color}</Card.Text>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">Stock disponible: {props.details.carStock}</small>

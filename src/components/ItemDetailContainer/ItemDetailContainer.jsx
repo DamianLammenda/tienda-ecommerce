@@ -6,16 +6,16 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 const ItemDetailContainer = () => {
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const searchId = 9;
   useEffect(() => {
     let cargaData = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(DataJson);
+        resolve(DataJson.filter((pItem) => pItem.id === searchId).shift());
       }, 2000);
       setLoading(false);
     });
-    cargaData.then(() => {
-      setDetails(DataJson);  
+    cargaData.then((res) => {
+      setDetails(res);  
       setLoading(true)   
     });
   }, []);

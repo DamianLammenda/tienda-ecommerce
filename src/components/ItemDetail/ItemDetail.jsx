@@ -2,9 +2,9 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
+import Spinner from 'react-bootstrap/Spinner';
 
 const ItemDetail = (props) => {
-  console.log(props.details.category)
   console.log(props.details)
   return props.loading ? (
     <>
@@ -23,7 +23,7 @@ const ItemDetail = (props) => {
                 <small className="text-muted">Stock disponible: {props.details.carStock}</small>
               </Card.Footer>
               <Card.Footer>
-                <small>Precio: {parseFloat(props.details.price)}</small>
+                <small>Precio: {props.details.price.toFixed(3)}</small>
               </Card.Footer>
             </Card>
           </Col>
@@ -32,7 +32,7 @@ const ItemDetail = (props) => {
     </>
   ) : (
     <>
-      <h1>Cargando...</h1>
+        <Spinner animation="grow" variant="dark" />
     </>
   );
 };

@@ -1,0 +1,8 @@
+
+.linkName {
+    text-decoration: none;
+    color: rgb(44, 44, 44);   
+}
+.dropdown-item {
+    background-color: transparent !important;
+}

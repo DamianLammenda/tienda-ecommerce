@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import DataJson from "../details.json";
 import ItemDetail from "../ItemDetail/ItemDetail";
-
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-
+  const {id} = useParams();
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(false);
-  const searchId = 9;
+  const searchId = parseInt(id);
   useEffect(() => {
     let cargaData = new Promise((resolve) => {
       setTimeout(() => {

@@ -4,29 +4,30 @@ import DataJson from "../data.json";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
-  const id = useParams()
-  console.log (id)
-  const {type} = useParams();
-    
-  console.log(type)
+  const { type } = useParams();
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     let cargaData = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(DataJson.filter((products) => products.category.type === id));
+        if (type) {
+          resolve(
+            DataJson.filter((products) => products.category.type === type)
+          );
+        } else {
+          resolve(DataJson);
+        }
       }, 2000);
       setLoading(false);
     });
-
     cargaData
-      .then(() => {
-        setItems(DataJson);
+      .then((res) => {
+        setItems(res);
         setLoading(true);
       })
       .catch((error) => console.error(error));
-  }, [id]);
+  }, [type]);
   return (
     <>
       {/* <ItemCards /> */}

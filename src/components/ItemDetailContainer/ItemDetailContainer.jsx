@@ -4,6 +4,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 
 const ItemDetailContainer = () => {
+
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(false);
   const searchId = 9;

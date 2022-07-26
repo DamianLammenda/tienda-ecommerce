@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-size: 1rem;
+    max-width: 200px;
 }
 .badgeOff {
     text-decoration: line-through;

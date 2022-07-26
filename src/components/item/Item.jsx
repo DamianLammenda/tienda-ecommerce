@@ -10,10 +10,10 @@ const Items = (props) => {
   return (
     <>
       <Container >
-        <Row >
-          <Col className="col-md-4" >
+        <Row className="  mb-5 ">
+          <Col className='col-md-4 '>
             <Card >
-              <Card.Img  variant="top" src={props.datos.carImg} />
+              <Card.Img style={{width:"18em"}} variant="top" src={props.datos.carImg} />
               <Card.Body>
                 <Card.Title>Marca: {props.datos.carMake}</Card.Title>
                 <Card.Text>Modelo: {props.datos.carModel}</Card.Text>
@@ -24,7 +24,7 @@ const Items = (props) => {
                   Stock disponible: {props.datos.carStock}
                 </small>
               </Card.Footer>
-              <Link to={`/item/${props.datos.id}`}  style={{ textDecoration: "none" }}>
+              <Link to={`/item/${props.datos.id}`}>
                 <Button className="btn btn-dark">+INFO </Button>
               </Link>
             </Card>

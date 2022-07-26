@@ -1,21 +1,26 @@
-import React from 'react'
+import React  from 'react'
+import { useState } from 'react';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import Spinner from 'react-bootstrap/Spinner';
 import ItemCount from "../itemCount/ItemCount";
+import {useNavigate} from "react-router-dom"
 
-const onAddItem = (count) => {
-  alert(`${count} items agregados al carrito!`);
-};
 
 const ItemDetail = (props) => {
-  console.log(props.details);
+  const [amount, setAmount] = useState(0);
+  const naviagate = useNavigate();
+  const onAddItem = (count) => {
+    setAmount(count)
+    alert(`${count} items agregados al carrito!`);
+    naviagate("/cart");
+  };
   return props.loading ? (
     <>
-      <Container style={{ width: "18rem" }}>
-        <Row  className="d-flex  mb-5 flex-nowrap">
+      <Container >
+        <Row >
           <Col>
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src={props.details.carImg} />
@@ -34,7 +39,7 @@ const ItemDetail = (props) => {
               <Card.Footer>
                 <small>Precio: {props.details.price.toFixed(3)}</small>
               </Card.Footer>
-              <ItemCount stock={5} initial={0} onAdd={onAddItem} />
+              {amount == 0 && <ItemCount stock={props.details.carStock} initial={0} onAdd={onAddItem} /> }
             </Card>
           </Col>
         </Row>

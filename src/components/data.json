@@ -17,8 +17,8 @@
     "carStock": 6,
     "carImg": "https://www.motortrend.com/uploads/sites/10/2015/11/2006-pontiac-montana-sv6-fwd-mini-van-angular-front.png?fit=around%7C875:492.1875",
     "category": {
-      "id": 2,
-      "type": "sedan"
+      "id": 1,
+      "type": "truck"
     }
   }, {
     "id": 3,
@@ -92,7 +92,7 @@
     "carModel": "Focus",
     "carYear": 2018,
     "carStock": 19,
-    "carImg": "https://img.motoryracing.com/noticias/portada/24000/24870-n.jpg",
+    "carImg": "https://www.autofacil.es/wp-content/uploads/2021/05/fordfcous3.jpg",
     "category": {
       "id": 2,
       "type": "sedan"

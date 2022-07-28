@@ -116,14 +116,14 @@
     "carModel": "Focus",
     "carYear": 2018,
     "carStock": 19,
-    "carImg": "https://img.motoryracing.com/noticias/portada/24000/24870-n.jpg",
+    "carImg": "https://www.autofacil.es/wp-content/uploads/2021/05/fordfcous3.jpg",
     "category": {
       "id": 2,
       "type": "sedan"
     },
     "description":"En la nueva generación del Focus, Ford ha dado prioridad a la gasolina. El 1.0 Ecoboost se ofrece en tres niveles de potencia, 85, 100 y 125 CV, mientras que el nuevo EcoBoost 1.5 hace lo propio con dos versiones, una de 150 CV y otra de 182 CV que será, por el momento, el motor más potente de la gama.",
     "price": 44.899,
-    "color":"Amarillo"
+    "color":"Plateado"
   }, {
     "id": 10,
     "carMake": "Peugeot",

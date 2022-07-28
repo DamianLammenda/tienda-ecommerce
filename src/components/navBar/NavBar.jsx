@@ -31,7 +31,7 @@ const NavBar = () => {
             <Link to={"/"}>
               <Nav.Link href="#features">Products</Nav.Link>
             </Link>
-            <NavDropdown  title="Cars List" id="nav-dropdown">
+            <NavDropdown  title="Cars List" id="nav-dropdown" >
               <NavDropdown.Item eventKey="4.1">
                 <Link className='linkName' to={"/category/sedan"}>Sedan</Link>
               </NavDropdown.Item>

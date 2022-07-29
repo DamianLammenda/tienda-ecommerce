@@ -1,5 +1,5 @@
 import React,{useContext}  from 'react'
-import { useState, prevState } from 'react';
+import { useState } from 'react';
 import { Button } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import ItemCount from "../itemCount/ItemCount";
@@ -12,12 +12,6 @@ const ItemDetail = (props) => {
   const [amount, setAmount] = useState(0);
   
 
-  // const onAddItem = (count) => {
-  //   setAmount(count);
-  //   setCartItems((prevState)=> [...prevState,props.details])
-  //   console.log(prevState)
-    
-  // };
   return props.loading ? (
     <>
       <div className="card">
@@ -31,8 +25,8 @@ const ItemDetail = (props) => {
           </div>
           <div className="col-7 col-sm-8">
             <div className="card-body">
-              <h5 className="card-title">Marca: {props.details.carMake}</h5>
-              <p className="card-text">Modelo: {props.details.carModel}</p>
+              <h5 className="card-title">{props.details.carMake}</h5>
+              <p className="card-text">{props.details.carModel}</p>
               <p className="card-text">Año: {props.details.carYear}</p>
               <p className="card-text">Descripción: {props.details.description}</p>
               <p className="card-text">Color: {props.details.color}</p>
@@ -46,17 +40,21 @@ const ItemDetail = (props) => {
           </div>
         </div>
       </div>
-      {amount == 0 ? (
+      {amount === 0 ? (
         <ItemCount
           stock={props.details.carStock}
           initial={0}
           onAdd={addItem}
-          item={props.details}
+          item={props.details} 
+          amount={amount}                  
         />
       ) : (
-        <Link to={"/Cart/"}>
-          <Button className="btn btn-success">Ir al Carrito </Button>
-        </Link>
+        <div>
+          <h4>Productos agregados</h4>
+        <Link to={"/cart"}>
+          <Button className="btn btn-success btn-checkout"> Procesar Compra </Button>
+          </Link>
+        </div>
       )}
     </>
   ) : (

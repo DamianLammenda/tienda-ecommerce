@@ -9,11 +9,10 @@ const CartProvider = (props) => {
     let index = -1;
     let cantidad = 0;
     let isIn = false;
-
     cartItems.forEach((element, indice) =>{
         if(element.item.id === itemId){
             index = indice;
-            cantidad = element.quantity;
+            cantidad = element.count;
             isIn = true;
         }
     });
@@ -28,7 +27,8 @@ const CartProvider = (props) => {
         count = count + cantidad;
         setCartItems(cartItems.splice(index , 1));
     }
-    setCartItems([...cartItems, {item,quantity}]);
+    setCartItems([...cartItems, {item,count}]);
+    
   }
 
   const removeItem = (itemId) => {
@@ -45,7 +45,7 @@ const CartProvider = (props) => {
 
 
   return (
-    <CartContext.Provider value={{ cartItems, setCartItems, addItem }}>
+    <CartContext.Provider value={{ cartItems, addItem }}>
       {props.children}
     </CartContext.Provider>
   );

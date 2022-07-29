@@ -1,11 +1,9 @@
-import React,{} from "react";
-import { CartContext } from "../cartContext/CartContext";
+import React from "react";
 
 
 
 const Cart = ( ) => {
     
-    const {cartItems} = CartContext(CartContext);
 
 
     return ( 

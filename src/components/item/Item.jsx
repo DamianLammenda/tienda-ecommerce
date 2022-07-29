@@ -5,7 +5,8 @@ import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import "../item/item.css"
+import "../ItemDetail/ItemDetail"
 
 const Items = (props) => {
   return (
@@ -13,10 +14,10 @@ const Items = (props) => {
      
           <div className="col m-2" >
             <div className="card card border-light"  >
-              <Card.Img src={props.datos.carImg}  style={{height: "40vh"}} />
+              <Card.Img className='cardImg' src={props.datos.carImg} />
               <Card.Body >
-                <Card.Title>Marca: {props.datos.carMake}</Card.Title>
-                <Card.Text>Modelo: {props.datos.carModel}</Card.Text>
+                <Card.Title> {props.datos.carMake}</Card.Title>
+                <Card.Text> {props.datos.carModel}</Card.Text>
                 <Card.Text>Año: {props.datos.carYear}</Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -25,10 +26,10 @@ const Items = (props) => {
                 </small>
               </Card.Footer>
               <Link to={`/item/${props.datos.id}`} className="d-flex justify-content-center m-1 " >
-                <Button
+                <Button className='btnInfo'
                   type="button"
                    
-                  style={{ fontSize: "0.7rem" }}
+                  
                 >
                   +INFO
                 </Button>

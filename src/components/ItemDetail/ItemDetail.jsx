@@ -1,16 +1,23 @@
-import React,{useContext}  from 'react'
-import { useState } from 'react';
+import React,{useContext, useState}  from 'react'
 import { Button } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import ItemCount from "../itemCount/ItemCount";
 import { Link } from "react-router-dom";
-import { CartContext } from '../cartContext/CartContext';
+// import { CartContext } from '../cartContext/CartContext';
 
+import {GContext} from "../cartContext/CartContext"
 
-const ItemDetail = (props) => {
-  const {cartItems, setCartItems, addItem} = useContext(CartContext);
+const ItemDetail = (props, item) => {
+  //const [initial]= useContext(CartContext);
+  // const {cartItems, setCartItems, addItem} = useContext(GContext);
   const [amount, setAmount] = useState(0);
-  
+  const { addItem } = useContext(GContext);
+
+  const onAdd = (cant) => {
+    addItem(item, cant);
+  };
+
+  console.log(addItem);
 
   return props.loading ? (
     <>

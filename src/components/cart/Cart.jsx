@@ -1,24 +1,9 @@
-// import React, { useContext } from "react";
-// import {CardContext} from "../cartContext/CartContext"
 
-
-// const Cart = ( ) => {
-    
-
-
-//     return ( 
-//         <>
-//         <h1>Agregado al carrito</h1>
-        
-//         </>
-//      );
-// }
- 
-// export default Cart;
 
 import React, { useContext } from "react";
 import { GContext } from "../cartContext/CartContext";
 import CartItem from "../cartItem/CartItem";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const { itemsCarrito, removeItem, clear, total } = useContext(GContext);
   const tot = total();
@@ -27,17 +12,19 @@ const Cart = () => {
       {itemsCarrito.length === 0 ? (
         <>
           <h4>No hay items! Agrega algunos</h4>
-          <h4>Volver</h4>
+          <Link to={"/"} > <button className="btn btn-secondary">Volver</button> </Link>   
         </>
       ) : (
         <>
           {itemsCarrito.map((element) => (
             <CartItem item={element.item} quantity={element.quantity} removeItem={removeItem} />
           ))}
-          <button  onClick={() => clear()}>
+          <button className="btn btn-warning"  onClick={() => clear()}>
             Vaciar carrito
           </button>
-          <h1>El total de la compra es de : {tot}</h1>
+          <h1>El total de la compra es de : USD {tot.toFixed(3)}</h1>
+          <button className="btn btn-success">Finalizar Compra</button>
+          <Link to={"/"} > <button className="btn btn-secondary">Volver</button> </Link> 
         </>
       )}
     </>

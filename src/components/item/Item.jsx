@@ -1,7 +1,4 @@
 import React from 'react'
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -27,10 +24,7 @@ const Items = (props) => {
               </Card.Footer>
               <Link to={`/item/${props.datos.id}`} className="d-flex justify-content-center m-1 " >
                 <Button className='btnInfo'
-                  type="button"
-                   
-                  
-                >
+                  type="button">
                   +INFO
                 </Button>
               </Link>

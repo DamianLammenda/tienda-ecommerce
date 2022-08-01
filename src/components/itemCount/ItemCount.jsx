@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 
 
-const ItemCount = ({stock,initial, onAdd, item}) => {
+const ItemCount = ({stock,initial, onAdd, item, amount}) => {
 const [count, setCount] = useState(initial);
 
 
@@ -15,7 +15,7 @@ const [count, setCount] = useState(initial);
         <Button className="btnMenos"  variant="danger" onClick={()=> setCount(Math.max(count - 1, initial)) }> - </Button>
         {count}
         <Button className="btnMas" variant="success" onClick={() => setCount(Math.min (count + 1, stock))} > + </Button>
-        <div > <Button onClick={() => {onAdd(count, item)}}  className="btnGoCart" variant="warning" disabled={count === 0} > Agregar al Carrito</Button></div>
+        <div > <Button onClick={() => {onAdd(item, count)}}  className="btnGoCart" variant="warning" disabled={count === 0} > Agregar al Carrito</Button></div>
     </div>
     </>
   );

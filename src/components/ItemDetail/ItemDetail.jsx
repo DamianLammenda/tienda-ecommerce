@@ -3,21 +3,15 @@ import { Button } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import ItemCount from "../itemCount/ItemCount";
 import { Link } from "react-router-dom";
-// import { CartContext } from '../cartContext/CartContext';
+import { GContext } from "../cartContext/CartContext";
 
-import {GContext} from "../cartContext/CartContext"
-
-const ItemDetail = (props, item) => {
-  //const [initial]= useContext(CartContext);
-  // const {cartItems, setCartItems, addItem} = useContext(GContext);
+const ItemDetail = (props) => {
   const [amount, setAmount] = useState(0);
   const { addItem } = useContext(GContext);
-
-  const onAdd = (cant) => {
-    addItem(item, cant);
+  const onAdd = (item, count, amount) => {
+    addItem(item, count);
+    setAmount(amount);
   };
-
-  console.log(addItem);
 
   return props.loading ? (
     <>
@@ -35,9 +29,13 @@ const ItemDetail = (props, item) => {
               <h5 className="card-title">{props.details.carMake}</h5>
               <p className="card-text">{props.details.carModel}</p>
               <p className="card-text">Año: {props.details.carYear}</p>
-              <p className="card-text">Descripción: {props.details.description}</p>
+              <p className="card-text">
+                Descripción: {props.details.description}
+              </p>
               <p className="card-text">Color: {props.details.color}</p>
-              <p className="card-text">Precio: USD {props.details.price}$</p>
+              <p className="card-text">
+                Precio: USD {props.details.price.toFixed(3)}$
+              </p>
               <p className="card-text">
                 <small className="text-muted">
                   Stock disponible: {props.details.carStock}
@@ -47,22 +45,35 @@ const ItemDetail = (props, item) => {
           </div>
         </div>
       </div>
-      {amount === 0 ? (
+      {(amount === 0 ? (
+        
         <ItemCount
           stock={props.details.carStock}
           initial={0}
-          onAdd={addItem}
-          item={props.details} 
-          amount={amount}                  
+          onAdd={onAdd}
+          item={props.details}
+          amount={amount}
+          
         />
-      ) : (
-        <div>
-          <h4>Productos agregados</h4>
-        <Link to={"/cart"}>
-          <Button className="btn btn-success btn-checkout"> Procesar Compra </Button>
-          </Link>
-        </div>
-      )}
+      ) : ( 
+      
+       <div>
+         <p>Producto agregado</p>
+         <Link to={"/cart"}>
+            <button className="btn btn-success btn-checkout">
+              
+             Procesar Compra
+           </button>
+         </Link>
+         <Link to={"/"}>
+            <button className="btn btn-secondary btn-checkout">
+              
+             Seguir Comprando
+           </button>
+         </Link>
+       </div>
+      ))}
+      
     </>
   ) : (
     <>

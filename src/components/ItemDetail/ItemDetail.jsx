@@ -3,6 +3,7 @@ import Spinner from "react-bootstrap/Spinner";
 import ItemCount from "../itemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { GContext } from "../cartContext/CartContext";
+import "../ItemDetail/itemDetails.css"
 
 
 const ItemDetail = (props) => {
@@ -12,8 +13,10 @@ const ItemDetail = (props) => {
     addItem(item, count);
     setAmount(amount);
   };
+  console.log(props.details.carMake);
 
   return props.loading ? (
+    
     <>
       <div className="card">
         <div className="row g-0">
@@ -34,7 +37,7 @@ const ItemDetail = (props) => {
               </p>
               <p className="card-text">Color: {props.details.color}</p>
               <p className="card-text">
-                Precio: USD {props.details.price.toFixed(3)}$
+                Precio: USD {props.details.price}$
               </p>
               <p className="card-text">
                 <small className="text-muted">
@@ -50,7 +53,7 @@ const ItemDetail = (props) => {
         <>
         <div>
         <Link to={"/"}>
-            <button className="btnInfo">
+            <button className="btnvolver">
               Volver
             </button>
           </Link>

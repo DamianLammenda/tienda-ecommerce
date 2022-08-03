@@ -1,5 +1,5 @@
 
-.btn-checkou{
+/* .btn-checkou{
     background-color: #198754 !important;
     border-color: #198754 !important;
 }
@@ -7,4 +7,29 @@
 .btn-primary {
     background-color: #198754 !important;
     border-color: #198754;
+} */
+.btnvolver{
+    -webkit-text-size-adjust: 100%;
+    list-style: none;
+    touch-action: manipulation;
+    margin: 0;
+    overflow: visible;
+    font: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    transition: .1s ease-in-out;
+    transition-property: color,background-color,border-color;
+    border-radius: 50px;
+    padding: 0 30px;
+    text-transform: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 42px;
+    background-color: #11294b;
+    color: #fff;
+    border: 3px solid #fff;
+    cursor: pointer;
 }

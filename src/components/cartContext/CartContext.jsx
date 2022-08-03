@@ -1,5 +1,6 @@
 
 import React, { createContext, useState } from "react";
+import CartWidget from "../cartWidget/CartWidget";
 export const GContext = createContext();
 
 const CartContext = ({ children }) => {
@@ -38,6 +39,9 @@ const CartContext = ({ children }) => {
       0
     );
   };
+
+ 
+  
   return <GContext.Provider value={{ itemsCarrito, addItem, removeItem, clear, total }}>{children}</GContext.Provider>;
 };
 

@@ -1,9 +1,9 @@
 import React,{useContext, useState}  from 'react'
-import { Button } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import ItemCount from "../itemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { GContext } from "../cartContext/CartContext";
+
 
 const ItemDetail = (props) => {
   const [amount, setAmount] = useState(0);

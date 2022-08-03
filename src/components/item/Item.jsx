@@ -25,7 +25,7 @@ const Items = (props) => {
               <Link to={`/item/${props.datos.id}`} className="d-flex justify-content-center m-1 " >
                 <Button className='btnInfo'
                   type="button">
-                  +INFO
+                  Me Interesa
                 </Button>
               </Link>
             </div>

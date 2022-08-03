@@ -6,3 +6,8 @@
 .dropdown-item {
     background-color: transparent !important;
 }
+.navBar{
+    width: 100%;
+    /* position: fixed;
+    z-index: 1; */
+}

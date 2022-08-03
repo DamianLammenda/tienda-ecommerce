@@ -11,7 +11,7 @@ const Cart = () => {
     <>
       {itemsCarrito.length === 0 ? (
         <>
-          <h4>No hay items! Agrega algunos</h4>
+          <h4>No hay Productos! Agrega algunos</h4>
           <Link to={"/"} > <button className="btn btn-secondary">Volver</button> </Link>   
         </>
       ) : (

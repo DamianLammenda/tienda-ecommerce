@@ -45,35 +45,40 @@ const ItemDetail = (props) => {
           </div>
         </div>
       </div>
-      {(amount === 0 ? (
-        
+      
+      {amount === 0 ? (
+        <>
+        <div>
+        <Link to={"/"}>
+            <button className="btnInfo">
+              Volver
+            </button>
+          </Link>
+        </div>
         <ItemCount
           stock={props.details.carStock}
           initial={0}
           onAdd={onAdd}
           item={props.details}
           amount={amount}
-          
         />
-      ) : ( 
-      
-       <div>
-         <p>Producto agregado</p>
-         <Link to={"/cart"}>
+        </>
+
+      ) : (
+        <div>
+          <p>Producto agregado</p>
+          <Link to={"/cart"}>
             <button className="btn btn-success btn-checkout">
-              
-             Procesar Compra
-           </button>
-         </Link>
-         <Link to={"/"}>
+              Procesar Compra
+            </button>
+          </Link>
+          <Link to={"/"}>
             <button className="btn btn-secondary btn-checkout">
-              
-             Seguir Comprando
-           </button>
-         </Link>
-       </div>
-      ))}
-      
+              Seguir Comprando
+            </button>
+          </Link>
+        </div>
+      )}
     </>
   ) : (
     <>

@@ -17,7 +17,7 @@ const Cart = () => {
       ) : (
         <>
           {itemsCarrito.map((element) => (
-            <CartItem item={element.item} quantity={element.quantity} removeItem={removeItem} />
+            <CartItem item={element.item} quantity={element.quantity} removeItem={removeItem} key={element.id}/>
           ))}
           <button className="btn btn-warning"  onClick={() => clear()}>
             Vaciar carrito

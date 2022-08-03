@@ -11,7 +11,7 @@ const Items = (props) => {
      
           <div className="col m-2" >
             <div className="card card border-light"  >
-              <Card.Img className='cardImg' src={props.datos.carImg} />
+              <Link to={`/item/${props.datos.id}`}><Card.Img className='cardImg' src={props.datos.carImg} /></Link>
               <Card.Body >
                 <Card.Title> {props.datos.carMake}</Card.Title>
                 <Card.Text> {props.datos.carModel}</Card.Text>

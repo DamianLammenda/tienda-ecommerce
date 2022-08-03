@@ -1,21 +1,21 @@
 [{
+  "id": 1,
+  "carMake": "Ford",
+  "carModel": "Bronco",
+  "carYear": 2021,
+  "carStock": 15,
+  "carImg": "https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/nameplate/bronco-sport/prelaunch/big-bend/colorizer/plata-lunar/far-bronco-sport-big-bend-color-plata-lunar.jpg.dam.full.high.jpg/1614884351152.jpg",
+  "category": {
     "id": 1,
-    "carMake": "Land Rover",
-    "carModel": "Range Rover",
-    "carYear": 2007,
-    "carStock": 15,
-    "carImg": "https://cars.usnews.com/static/images/Auto/izmo/293573/2008_land_rover_range_rover_angularfront.jpg",
-    "category": {
-      "id": 1,
-      "type": "truck"
-    }
-  }, {
+    "type": "truck"
+  }
+}, {
     "id": 2,
-    "carMake": "Pontiac",
-    "carModel": "Montana",
-    "carYear": 2006,
+    "carMake": "Ford",
+    "carModel": "Maverick",
+    "carYear": 2022,
     "carStock": 6,
-    "carImg": "https://www.motortrend.com/uploads/sites/10/2015/11/2006-pontiac-montana-sv6-fwd-mini-van-angular-front.png?fit=around%7C875:492.1875",
+    "carImg": "https://tiendup.b-cdn.net/business/67/products/DmaYoR_6189809262ef4_medium.jpg",
     "category": {
       "id": 1,
       "type": "truck"

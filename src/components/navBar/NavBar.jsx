@@ -31,8 +31,8 @@ const NavBar = () => {
             <Link to={"/"}>
               <Nav.Link href="#features">Productos</Nav.Link>
             </Link>
-            <NavDropdown  title="Lista de Vehículos" id="nav-dropdown" >
-              <NavDropdown.Item eventKey="4.1">
+            <NavDropdown  title="Lista de Vehículos"  >
+              <NavDropdown.Item eventKey="4.1" >
                 <Link className='linkName'  to={"/category/sedan"}>Sedan</Link>
               </NavDropdown.Item>
               <NavDropdown.Item eventKey="4.2">
@@ -46,20 +46,7 @@ const NavBar = () => {
                 <Link className='linkName' to={"/"}>Todos los vehículos</Link>
               </NavDropdown.Item>
             </NavDropdown>
-            {/* <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link> */}
-          </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button className="me-4" variant="outline-success">
-              Search
-            </Button>
-          </Form>
+          </Nav>  
           <Nav className="d-flex">
             <Link to={"/cart"}>
               <Nav.Link href="#features">

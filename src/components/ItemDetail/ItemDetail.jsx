@@ -13,8 +13,7 @@ const ItemDetail = (props) => {
     addItem(item, count);
     setAmount(amount);
   };
-  console.log(props.details.carMake);
-
+ 
   return props.loading ? (
     
     <>

@@ -7,9 +7,15 @@ import "../cartWidget/cartWidget.css"
 const CartWidget = () => {
   const {itemsCarrito} = useContext(GContext);
   return (
-    <>      
+    <> 
+    {itemsCarrito.length === 0 ?(
+      <></>
+    ):(
+      <>
       <FontAwesomeIcon className='cartIcon' icon={faCartShopping} />
       <span className='counter'>{itemsCarrito.length}</span>
+      </>
+    )}     
     </>
   );
 };

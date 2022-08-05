@@ -13,7 +13,7 @@ const CartWidget = () => {
     ):(
       <>
       <FontAwesomeIcon className='cartIcon' icon={faCartShopping} />
-      <span className='counter'>{itemsCarrito.length}</span>
+      <span className='counter rounded-pill'>{itemsCarrito.length}</span>
       </>
     )}     
     </>

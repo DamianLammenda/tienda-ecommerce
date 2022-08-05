@@ -1,6 +1,8 @@
 .counter{
-    margin-left: 10px;
+    margin: 5px;
     font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+
 }
 .cartIcon{
     font-size: 1.2rem;

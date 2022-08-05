@@ -1,16 +1,45 @@
 
 import React from "react";
-
+import "../cartItem/cartItem.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 const CartItem = ({ item, quantity, removeItem }) => {
   return (
-    <div className="flex">
-       <img src={item.carImg} style={{width:"8rem"}} alt={item.carModel}
-            />{item.carMake} - {item.carModel} - <span>Precio unidad: USD </span> {item.price.toFixed(3)} - <span>Cantidad: </span>{quantity}
-      <button className="btn btn-danger" onClick={() => removeItem(item.id)}>
-        X
-      </button>
-      
+    <div className=" mt-4">
+      <table className="table1 table table-responsive ">
+        <thead>
+          <tr class="table-dark"> 
+            <th></th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Cantidad</th>
+            <th>Quitar</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src={item.carImg}
+                style={{ width: "120px" }}
+                alt={item.carModel}
+              />
+            </td>
+            <td>{item.carMake}</td>
+            <td>{item.carModel}</td>
+            <td>{quantity}</td>
+            <td>
+            
+              <FontAwesomeIcon className='cartRemove' icon={faTrashCan} onClick={() => removeItem(item.id)} />
+            </td>
+            <td>USD: {item.price}</td>
+          </tr>
+        </tbody>
+         
+
+      </table>
     </div>
   );
 };

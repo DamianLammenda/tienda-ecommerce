@@ -15,7 +15,7 @@ import  "../navBar/navBar.css"
 
 const NavBar = () => {
   return (
-    <Navbar className='navBar ' sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar className='navBar ' sticky="top" collapseOnSelect expand="sm" bg="dark" variant="dark">
       <Container>
         <Link to={"/"}>
           <Navbar.Brand href="#home">

@@ -3,6 +3,7 @@ import ItemList from "../itemList/ItemList";
 import { useParams } from "react-router-dom";
 import {getFirestore, collection,getDocs, query, where} from "firebase/firestore";
 
+
 const ItemListContainer = () => {
   const { type } = useParams();
   const [loading, setLoading] = useState(false);
@@ -11,20 +12,26 @@ const ItemListContainer = () => {
   useEffect(() => {
     const db = getFirestore();
     const carCollection = collection(db,"data");
-    //const queryCars =query(carCollection, where("category","==", type))
-    getDocs(carCollection).then(
-      (snapshot) => {
-        const data = snapshot.docs.map(doc =>({
-          id: doc.id, ...doc.data()
-        }))
-  
-        console.log();
-        setItems(data);
-
-       
-      }
-    )
-    },[]);
+    if(type){
+      const queryCars = query(carCollection, where("category.type","==",type))
+      console.log(type)
+      getDocs(queryCars).then(
+        (snapshot) => {
+          const data = snapshot.docs.map(doc =>({
+            id: doc.id, ...doc.data()
+          }));
+          setItems(data);       
+        }
+      )
+    }else{
+      getDocs(carCollection).then(
+        (snapshot) => {
+          const data = snapshot.docs.map(doc =>({
+            id: doc.id, ...doc.data()
+          }));
+          setItems(data);  
+    })}
+    },[type]);
 
   return  (
     <>

@@ -1,6 +1,5 @@
 
 import React, { createContext, useState } from "react";
-import CartWidget from "../cartWidget/CartWidget";
 export const GContext = createContext();
 
 const CartContext = ({ children }) => {

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import DataJson from "../details.json";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import {getFirestore,getDoc, collection,query, where, doc} from "firebase/firestore";
+import {getFirestore,getDoc, doc} from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const {id} = useParams();

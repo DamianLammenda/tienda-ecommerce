@@ -3,8 +3,7 @@ import Spinner from "react-bootstrap/Spinner";
 import ItemCount from "../itemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { GContext } from "../cartContext/CartContext";
-import "../ItemDetail/itemDetails.css"
-
+import "../ItemDetail/itemDetails.css";
 
 const ItemDetail = (props) => {
   const [amount, setAmount] = useState(0);
@@ -70,7 +69,7 @@ const ItemDetail = (props) => {
         <div>
           <p>Producto agregado</p>
           <Link to={"/cart"}>
-            <button className="btn btn-success btn-checkout">
+            <button className="btn btn-success btn-checkout" key={props.details.id}>
               Procesar Compra
             </button>
           </Link>

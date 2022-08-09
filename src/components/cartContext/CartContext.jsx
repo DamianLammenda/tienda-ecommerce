@@ -1,10 +1,10 @@
 
 import React, { createContext, useState } from "react";
+import 'react-toastify/dist/ReactToastify.css';
 export const GContext = createContext();
 
 const CartContext = ({ children }) => {
   const [itemsCarrito, setItemCarrito] = useState([]);
-
   const addItem = (item, quantity) => {
     const newItem = isInCart(item);
     if (newItem) {
@@ -13,10 +13,12 @@ const CartContext = ({ children }) => {
         itemsCarrito.splice(
           itemsCarrito.findIndex((element) => element.item.id === item.id),
           1
-        )
+          ),       
       );
+        
     }
     setItemCarrito([...itemsCarrito, { item, quantity }]);
+    
   };
 
   const isInCart = (item) => {
@@ -41,7 +43,7 @@ const CartContext = ({ children }) => {
 
  
   
-  return <GContext.Provider value={{ itemsCarrito, addItem, removeItem, clear, total }}>{children}</GContext.Provider>;
+  return <GContext.Provider value={{ itemsCarrito, addItem, removeItem, clear, total }}>{children} </GContext.Provider>;
 };
 
 export default CartContext;

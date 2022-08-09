@@ -9,7 +9,7 @@ const CartItem = ({ item, quantity, removeItem }) => {
     <div className=" mt-4">
       <table className="table1 table table-responsive ">
         <thead>
-          <tr class="table-dark"> 
+          <tr className="table-dark"> 
             <th></th>
             <th>Marca</th>
             <th>Modelo</th>

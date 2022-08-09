@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     const docRef = doc(db, "data",id);
     getDoc(docRef).then(
       snapshot =>{
-        setDetails ({id: snapshot.id, ...snapshot.data()})
+        setDetails ({id: snapshot.id, ...snapshot.data()});
       })
     setLoading(true);
     

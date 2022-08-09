@@ -6,8 +6,6 @@ import CartItem from "../cartItem/CartItem";
 import { Link } from "react-router-dom";
 import "../cart/cart.css"
 import {getFirestore, collection, addDoc} from "firebase/firestore";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Swal from "sweetalert2";
 
 
@@ -52,7 +50,6 @@ const Cart = () => {
               icon: "error",
               title: "Error",
               text: "Por favor complete todos los campos",
-              text: `${itemsCarrito.id}`,
               confirmButtonText: "Aceptar",
             });
           } else {

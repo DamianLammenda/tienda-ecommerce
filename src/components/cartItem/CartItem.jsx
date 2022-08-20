@@ -6,7 +6,7 @@ import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 const CartItem = ({ item, quantity, removeItem }) => {
   return (
-    <div className=" mt-4">
+    <div className=" m-4">
       <table className="table1 table table-responsive ">
         <thead>
           <tr className="table-dark"> 
@@ -34,7 +34,7 @@ const CartItem = ({ item, quantity, removeItem }) => {
             
               <FontAwesomeIcon className='cartRemove' icon={faTrashCan} onClick={() => removeItem(item.id)} />
             </td>
-            <td>USD: {item.price}</td>
+            <td>USD: ${Number(item.price).toFixed(3)}</td>
           </tr>
         </tbody>
          

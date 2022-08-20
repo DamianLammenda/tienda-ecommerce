@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import "../cart/cart.css"
 import {getFirestore, collection, addDoc} from "firebase/firestore";
 import Swal from "sweetalert2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeftLong, faCircleCheck, faUser } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -19,11 +21,11 @@ const Cart = () => {
         icon: "info",
         title: "Complete el formulario, para proceder con la compra",
         html: `
-        <input type="text" id="swal-input1" class="swal2-input" placeholder="Nombre">
-        <input type="text" id="swal-input2" class="swal2-input" placeholder="Apellido">
-        <input type="email" id="swal-input3" class="swal2-input" placeholder="Correo">
-        <input type="number" id="swal-input4" class="swal2-input" placeholder="Teléfono">
-        <input type="password" id="swal-input5" class="swal2-input" placeholder="Contraseña">
+        <input type="text" id="swal-input1" class="swal2-input" required placeholder="Nombre">
+        <input type="text" id="swal-input2" class="swal2-input" required placeholder="Apellido">
+        <input type="email" id="swal-input3" class="swal2-input" required placeholder="Correo">
+        <input type="number" id="swal-input4" class="swal2-input" required placeholder="Teléfono">
+        <input type="password" id="swal-input5" class="swal2-input" required placeholder="Contraseña">
         `,
         focusConfirm: true,
         confirmButtonText: "Confirmar",
@@ -69,6 +71,7 @@ const Cart = () => {
               console.log(res.id);
             });
             Swal.fire({
+              icon: "success",
               type: "success",
               title: "Registro exitoso",
               text: "Recibira un correo con los detalles de su orden",
@@ -106,9 +109,10 @@ const Cart = () => {
           <button className="btnVaciar"  onClick={() => clear()}>
             Vaciar carrito
           </button>
-          <h4 className="tituloTotal">El total de la compra es de : USD {tot}</h4>
-          <button className="btn btn-success" onClick={buy}>Finalizar Compra</button><ToastContainer />
-          <Link to={"/"} > <button className="btn btn-secondary">Volver</button> </Link> 
+          <h4 className="tituloTotal m-4">Total : USD ${tot.toFixed(3)}</h4>
+          <Link to={"/"} > <button className="btnVaciar"><FontAwesomeIcon icon={faArrowLeftLong} />   Volver</button> </Link> 
+          <div className="d-flex justify-content-end m-4"><button className="btnCheckout" onClick={buy}>Finalizar Compra   <FontAwesomeIcon icon={ faCircleCheck}/></button></div>
+          
         </>
         
       )}

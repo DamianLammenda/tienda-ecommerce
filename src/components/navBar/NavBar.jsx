@@ -4,9 +4,6 @@ import {
   Container,
   Nav,
   NavDropdown,
-  FormControl,
-  Button,
-  Form,
 } from "react-bootstrap";
 import logo from "../imgs/logo.png";
 import CartWidget from "../cartWidget/CartWidget";
@@ -19,15 +16,12 @@ const NavBar = () => {
       <Container>
         <Link to={"/"}>
           <Navbar.Brand href="#home">
-            <img style={{ width: 40 }} src={logo} alt="logo" />
+            <img style={{ width: 60 }} src={logo} alt="logo" />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link to={"/"}>
-              <Nav.Link  href="#home">Inicio</Nav.Link>
-            </Link>
             <Link to={"/"}>
               <Nav.Link href="#features">Productos</Nav.Link>
             </Link>

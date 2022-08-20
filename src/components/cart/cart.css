@@ -1,7 +1,56 @@
 .tituloTotal{
     text-align: right;
+    margin-right: 30px;
 }
 .btnVaciar{
     font-size: 0.9rem;
-    
+    -webkit-text-size-adjust: 100%;
+    list-style: none;
+    touch-action: manipulation;
+    margin-top: 10px;
+    overflow: visible;
+    font: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    transition: .1s ease-in-out;
+    transition-property: color,background-color,border-color;
+    border-radius: 50px;
+    padding: 0 20px;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 42px;
+    background-color: #11294b;
+    color: #fff;
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+.btnCheckout{
+    font-size: 0.9rem;
+    -webkit-text-size-adjust: 100%;
+    list-style: none;
+    touch-action: manipulation;
+    margin-top: 10px;
+    overflow: visible;
+    font: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    transition: .1s ease-in-out;
+    transition-property: color,background-color,border-color;
+    border-radius: 50px;
+    padding: 0 20px;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 42px;
+    background-color: #11294b;
+    color: #fff;
+    border: 3px solid #fff;
+    cursor: pointer;
 }

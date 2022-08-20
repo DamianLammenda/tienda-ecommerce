@@ -4,17 +4,25 @@ import ItemCount from "../itemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { GContext } from "../cartContext/CartContext";
 import "../ItemDetail/itemDetails.css";
+import Swal from 'sweetalert2';
 
 const ItemDetail = (props) => {
   const [amount, setAmount] = useState(0);
   const { addItem } = useContext(GContext);
   const onAdd = (item, count, amount) => {
+    {Swal.fire({
+      toast: true,
+      position: "top-end",
+      icon: "success",
+      title: "Agregado al carrito",
+      showConfirmButton: false,
+      timer: 3000,
+    })}
     addItem(item, count);
     setAmount(amount);
   };
  
   return props.loading ? (
-    
     <>
       <div className="card">
         <div className="row g-0">
@@ -35,7 +43,7 @@ const ItemDetail = (props) => {
               </p>
               <p className="card-text">Color: {props.details.color}</p>
               <p className="card-text">
-                Precio: USD {props.details.price}$
+                Precio: USD {Number(props.details.price).toFixed(3)}$
               </p>
               <p className="card-text">
                 <small className="text-muted">
@@ -46,36 +54,30 @@ const ItemDetail = (props) => {
           </div>
         </div>
       </div>
-      
+
       {amount === 0 ? (
         <>
-        <div>
-        <Link to={"/"}>
-            <button className="btnvolver">
-              Volver
-            </button>
-          </Link>
-        </div>
-        <ItemCount
-          stock={props.details.carStock}
-          initial={0}
-          onAdd={onAdd}
-          item={props.details}
-          amount={amount}
-        />
+          <div>
+            <Link to={"/"}>
+              <button className="btnvolver">Volver</button>
+            </Link>
+          </div>
+          <ItemCount
+            stock={props.details.carStock}
+            initial={0}
+            onAdd={onAdd}
+            item={props.details}
+            amount={amount}
+          />
         </>
-
       ) : (
-        <div>
-          <p>Producto agregado</p>
-          <Link to={"/cart"}>
-            <button className="btn btn-success btn-checkout" key={props.details.id}>
-              Procesar Compra
-            </button>
-          </Link>
+        <div className='m-4 d-flex  justify-content-between'>
           <Link to={"/"}>
-            <button className="btn btn-secondary btn-checkout">
-              Seguir Comprando
+            <button className="btnvolver">Seguir Comprando</button>
+          </Link>
+          <Link to={"/cart"}>
+            <button className="btnvolver" key={props.details.id}>
+              Procesar Compra
             </button>
           </Link>
         </div>

@@ -1,6 +1,5 @@
 
 import React, { createContext, useState } from "react";
-import 'react-toastify/dist/ReactToastify.css';
 export const GContext = createContext();
 
 const CartContext = ({ children }) => {
@@ -22,7 +21,7 @@ const CartContext = ({ children }) => {
   };
 
   const isInCart = (item) => {
-    return itemsCarrito.find((element) => element.item === item);
+    return itemsCarrito.find((element) => element.item === item.id);
   };
   
 
@@ -35,8 +34,10 @@ const CartContext = ({ children }) => {
   };
 
   const total = () => {
+
     return itemsCarrito.reduce(
-      (valorAnterior, valorActual) => valorAnterior + valorActual.item.price * valorActual.quantity,
+      (valorAnterior, valorActual) =>
+        valorAnterior + valorActual.item.price  * valorActual.quantity,
       0
     );
   };

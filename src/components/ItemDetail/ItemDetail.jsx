@@ -57,11 +57,11 @@ const ItemDetail = (props) => {
 
       {amount === 0 ? (
         <>
-          <div>
+          <div className='d-flex justify-content-between align-items-center ps-2'>
             <Link to={"/"}>
               <button className="btnvolver">Volver</button>
             </Link>
-          </div>
+          
           <ItemCount
             stock={props.details.carStock}
             initial={0}
@@ -69,6 +69,7 @@ const ItemDetail = (props) => {
             item={props.details}
             amount={amount}
           />
+          </div>
         </>
       ) : (
         <div className='m-4 d-flex  justify-content-between'>

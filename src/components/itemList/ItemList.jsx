@@ -8,7 +8,7 @@ const ItemList = (props, loading=false) => {
   return loading ? (
     <>
       <div className="d-flex justify-content-center m-4">
-      <img  src={logo} alt="logo" />
+      <img style={{width:180}} src={logo} alt="logo" />
       </div>
       
       <div className="row row-cols-1 row-cols-sm-4 d-flex justify-content-center" >

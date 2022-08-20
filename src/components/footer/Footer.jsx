@@ -46,8 +46,8 @@ const Footer = () => {
 						<div class="single_ftr">
 							<h4 class="sf_title">Información</h4>
 							<ul>
-								<Link to={"/about"}><li><a href="#">About Us</a></li></Link>
-								<Link to={"/contact"}><li><a href="#">Contact Us</a></li></Link>
+								<Link to={"/about"}><li><a href="#">Nuestra Empresa</a></li></Link>
+								<Link to={"/contact"}><li><a href="#">Contacto</a></li></Link>
 							</ul>
 						</div>
 					</div> 					

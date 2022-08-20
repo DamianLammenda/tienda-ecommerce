@@ -4,13 +4,16 @@ ul {
     margin-bottom: 0;
 }
 .footer_area {
-	padding:60px 0 20px;
+	padding:50px 0 20px;
 	position: relative;
 	color: #fff;
 	z-index: 100;
 	background: #222;
 	word-break: break-all;
 	word-wrap: break-word;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 .single_ftr form{
@@ -88,26 +91,10 @@ ul {
 	opacity: .9;
 }
 .newsletter_form ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
     color: #fff;
     opacity: 1
 }
 
-.newsletter_form ::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #fff;
-    opacity: 1
-}
-.newsletter_form :-ms-input-placeholder {
-    /* IE 10+ */
-    color: #fff;
-    opacity: 1
-}
-.newsletter_form :-moz-placeholder {
-    /* Firefox 18- */
-    color: #fff;
-    opacity: 1
-}
 .form-control:focus{
 	border-color: #33d286;
 }

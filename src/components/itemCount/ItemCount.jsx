@@ -11,7 +11,7 @@ const [count, setCount] = useState(initial);
   return (
     <>
       <div className="agregarItem m-4">
-        <h6>Agregar al Carrito</h6>
+        <h6> Agregar al Carrito</h6>
         <Button
           className="btnMenos"
           variant="danger"

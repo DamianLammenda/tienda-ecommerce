@@ -69,17 +69,18 @@ const Cart = () => {
             };
             addDoc(orderCollection, usuario).then((res) => {
               console.log(res.id);
-            });
-            Swal.fire({
-              icon: "success",
-              type: "success",
-              title: "Registro exitoso",
-              text: "Recibira un correo con los detalles de su orden",
-              confirmButtonText: "Aceptar",
-              preConfirm: () => {
-                clear();
-                window.location.href = "/";
-              },
+              Swal.fire({
+                icon: "success",
+                type: "success",
+                title: "Registro exitoso",
+                text: "Recibira un correo con los detalles de su orden",
+                text: `Su numero de orden es: ${res.id}`,
+                confirmButtonText: "Aceptar",
+                preConfirm: () => {
+                  clear();
+                  window.location.href = "/";
+                },
+              });
             });
           }
         }
@@ -90,10 +91,13 @@ const Cart = () => {
     <>
       {itemsCarrito.length === 0 ? (
         <>
-          <h4>No hay Productos! Agrega algunos</h4>
+          <h4 className="text-center fw-bolder mt-4">El carrito esta vacio</h4>
+          <div className="divVolver d-flex justify-content-center mt-4">
+
           <Link to={"/"}>
-            <button className="btn btn-secondary">Volver</button>
+            <button className="btnVolver">Volver</button>
           </Link>
+          </div>
         </>
       ) : (
         <>
@@ -106,11 +110,11 @@ const Cart = () => {
             />
           ))}
           
-          <button className="btnVaciar"  onClick={() => clear()}>
+          <button className="btnVaciar m-4"  onClick={() => clear()}>
             Vaciar carrito
           </button>
           <h4 className="tituloTotal m-4">Total : USD ${tot.toFixed(3)}</h4>
-          <Link to={"/"} > <button className="btnVaciar"><FontAwesomeIcon icon={faArrowLeftLong} />   Volver</button> </Link> 
+          <Link to={"/"} ><button className="btnVaciar m-4"><FontAwesomeIcon icon={faArrowLeftLong} /> Volver</button> </Link> 
           <div className="d-flex justify-content-end m-4"><button className="btnCheckout" onClick={buy}>Finalizar Compra   <FontAwesomeIcon icon={ faCircleCheck}/></button></div>
           
         </>

@@ -16,7 +16,7 @@ const NavBar = () => {
       <Container>
         <Link to={"/"}>
           <Navbar.Brand href="#home">
-            <img style={{ width: 60 }} src={logo} alt="logo" />
+            <img style={{ width: 70 }} src={logo} alt="logo" />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

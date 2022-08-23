@@ -68,7 +68,6 @@ const Cart = () => {
               fecha: new Date(),
             };
             addDoc(orderCollection, usuario).then((res) => {
-              console.log(res.id);
               Swal.fire({
                 icon: "success",
                 type: "success",

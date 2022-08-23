@@ -29,12 +29,12 @@ const Footer = () => {
 	}
     return (
       <>
-    <footer class="footer_area ">
-			<div class="container">
-				<div class="row justify-content-between">				
-					<div class="col-md-3 col-sm-6">
-						<div class="single_ftr">
-							<h4 class="sf_title">Contacto</h4>
+    <footer className="footer_area ">
+			<div className="container">
+				<div className="row justify-content-between">				
+					<div className="col-md-3 col-sm-6">
+						<div className="single_ftr">
+							<h4 className="sf_title">Contacto</h4>
 							<ul>
 								<li>4080 Repperts Coaol Road Sackson, MS 00201 USA</li>
 								<li>(+123) 685 78 455 </li>
@@ -42,23 +42,23 @@ const Footer = () => {
 							</ul>
 						</div>
 					</div> 					
-					<div class="col-md-3 col-sm-6">
-						<div class="single_ftr">
-							<h4 class="sf_title">Información</h4>
+					<div className="col-md-3 col-sm-6">
+						<div className="single_ftr">
+							<h4 className="sf_title">Información</h4>
 							<ul>
 								<Link to={"/about"}><li><a href="#">Nuestra Empresa</a></li></Link>
 								<Link to={"/contact"}><li><a href="#">Contacto</a></li></Link>
 							</ul>
 						</div>
 					</div> 					
-					<div class="col-md-3 col-sm-6">
-						<div class="single_ftr">
-							<h4 class="sf_title">Newsletter</h4>
-							<div class="newsletter_form">
+					<div className="col-md-3 col-sm-6">
+						<div className="single_ftr">
+							<h4 className="sf_title">Newsletter</h4>
+							<div className="newsletter_form">
 								<p>Registrate con tu correo y recibi las ultimas noticias del mercado de vehiculos</p>
-								<form method="post" class="form-inline">				
-									<input name="email" id="email" placeholder="Escribe tu email" class="form-control" type="email" />
-									<button onClick={sendMail} class="btn btn-default">Enviar <FontAwesomeIcon icon={faEnvelopeCircleCheck}/></button>					
+								<form method="post" className="form-inline">				
+									<input name="email" id="email" placeholder="Escribe tu email" className="form-control" type="email" />
+									<button onClick={sendMail} className="btn btn-default">Enviar <FontAwesomeIcon icon={faEnvelopeCircleCheck}/></button>					
 								</form>
 							</div>
 						</div>

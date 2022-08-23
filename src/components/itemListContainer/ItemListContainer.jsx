@@ -14,7 +14,6 @@ const ItemListContainer = () => {
     const carCollection = collection(db,"data");
     if(type){
       const queryCars = query(carCollection, where("category.type","==",type))
-      console.log(type)
       getDocs(queryCars).then(
         (snapshot) => {
           const data = snapshot.docs.map(doc =>({

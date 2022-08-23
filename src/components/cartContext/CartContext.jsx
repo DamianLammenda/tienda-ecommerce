@@ -21,7 +21,7 @@ const CartContext = ({ children }) => {
   };
 
   const isInCart = (item) => {
-    return itemsCarrito.find((element) => element.item === item.id);
+    return itemsCarrito.find((element) => element.item.id === item.id);
   };
   
 

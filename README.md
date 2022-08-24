@@ -13,4 +13,3 @@ El proyecto fue creado con [Create React App](https://github.com/facebook/create
 * NODEJS
 * Se implementan diferentes tecnologías como Boostrap, react-router, API's, Firebase.
 
-### El proyecto continua en desarrollo

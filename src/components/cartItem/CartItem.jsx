@@ -15,7 +15,7 @@ const CartItem = ({ item, quantity, removeItem }) => {
             <th>Modelo</th>
             <th>Cantidad</th>
             <th>Quitar</th>
-            <th>Precio</th>
+            <th>Precio Unitario</th>
           </tr>
         </thead>
         <tbody>

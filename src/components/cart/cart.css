@@ -1,6 +1,11 @@
 .tituloTotal{
-    text-align: right;
-    margin-right: 30px;
+    background-color: #074a2b;
+    color: white;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    justify-content: end;
+
 }
 .btnVaciar{
     font-size: 0.9rem;

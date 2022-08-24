@@ -19,7 +19,7 @@ const Footer = () => {
       Swall.fire({
         icon: "success",
         title: "Enviado",
-        text: "Mensaje enviado correctamente",
+        text: "Te enviaremos por correo las últimas noticias y novedades sobre vehículos destacados, ofertas, y mucho mas!",
         confirmButtonText: "Aceptar",
         preConfirm: () => {
           window.location.href = "/";

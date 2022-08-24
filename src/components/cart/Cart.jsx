@@ -1,5 +1,3 @@
-
-
 import React, { useContext } from "react";
 import { GContext } from "../cartContext/CartContext";
 import CartItem from "../cartItem/CartItem";
@@ -8,7 +6,7 @@ import "../cart/cart.css"
 import {getFirestore, collection, addDoc} from "firebase/firestore";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeftLong, faCircleCheck, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeftLong, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -71,9 +69,10 @@ const Cart = () => {
               Swal.fire({
                 icon: "success",
                 type: "success",
-                title: "Registro exitoso",
-                text: "Recibira un correo con los detalles de su orden",
-                text: `Su numero de orden es: ${res.id}`,
+                title: "Compra realizada con exito",
+                html: `<div>Muchas gracias por su compra <strong> ${usuario.nombre} ${usuario.apellido}.</strong></div>
+                      <div>Su número de orden es: <strong>${res.id}</strong></div>
+                      <div>Recibira un correo con los detalles y el seguimiento de su pedido</div>`,
                 confirmButtonText: "Aceptar",
                 preConfirm: () => {
                   clear();
@@ -112,7 +111,9 @@ const Cart = () => {
           <button className="btnVaciar m-4"  onClick={() => clear()}>
             Vaciar carrito
           </button>
-          <h4 className="tituloTotal m-4">Total : USD ${tot.toFixed(3)}</h4>
+          <div className=" tituloTotal d-flex m-4 ">
+          <h4>Total : USD ${tot.toFixed(3)}</h4>
+          </div>
           <Link to={"/"} ><button className="btnVaciar m-4"><FontAwesomeIcon icon={faArrowLeftLong} /> Volver</button> </Link> 
           <div className="d-flex justify-content-end m-4"><button className="btnCheckout" onClick={buy}>Finalizar Compra   <FontAwesomeIcon icon={ faCircleCheck}/></button></div>
           

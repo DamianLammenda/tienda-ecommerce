@@ -33,6 +33,7 @@ const CartContext = ({ children }) => {
     setItemCarrito(itemsCarrito.filter((element) => element.item.id !== itemId));
   };
 
+
   const total = () => {
 
     return itemsCarrito.reduce(
